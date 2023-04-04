@@ -87,7 +87,7 @@ class _AboutScreenState extends State<AboutScreen> {
             child: SizedBox(
               height: 500,
               child: ListView(
-                shrinkWrap: true,
+                //shrinkWrap: true,
                 children: [
                   Text(
                     // Consume the value of event.event
@@ -100,151 +100,146 @@ class _AboutScreenState extends State<AboutScreen> {
                   const SizedBox(
                     height: 18,
                   ),
-                  Container(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        ListTile(
-                          leading: Container(
-                              alignment: Alignment.topLeft,
-                              height: 48,
-                              width: 48,
-                              padding: const EdgeInsets.all(6),
-                              decoration: BoxDecoration(
-                                  color: const Color(0xffe5e5e5),
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Image.asset(
-                                  "lib/Helpers/Resources/Asset/Images/Calendar.png")),
-                          title: SizedBox(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  // Consume the value of event.eventdate
-                                  _inst.event.eventdate.toString(),
-                                  style: const TextStyle(
-                                      color: Color(0xff120D26),
-                                      letterSpacing: 1,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400),
-                                ),
-                                const SizedBox(
-                                  height: 5,
-                                ),
-                                Text(
-                                  // Consume the value of event.daytime
-                                  _inst.event.daytime.toString(),
-                                  style: const TextStyle(
-                                      color: Color(0xff747688),
-                                      letterSpacing: 1,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400),
-                                ),
-                              ],
-                            ),
+                  ListTile(
+                   contentPadding: const EdgeInsets.all(0),
+                    leading: Container(
+                        alignment: Alignment.topLeft,
+                        height: 48,
+                        width: 48,
+                        padding: const EdgeInsets.all(6),
+                        decoration: BoxDecoration(
+                            color: const Color(0xffe5e5e5),
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Image.asset(
+                            "lib/Helpers/Resources/Asset/Images/Calendar.png")),
+                    title: SizedBox(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            // Consume the value of event.eventdate
+                            _inst.event.eventdate.toString(),
+                            style: const TextStyle(
+                                color: Color(0xff120D26),
+                                letterSpacing: 1,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400),
                           ),
-                        ),
-                        const SizedBox(
-                          height: 18,
-                        ),
-                        ListTile(
-                          leading: Container(
-                              height: 48,
-                              width: 48,
-                              padding: const EdgeInsets.all(6),
-                              decoration: BoxDecoration(
-                                  color: const Color(0xffe5e5e5),
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Image.asset(
-                                  "lib/Helpers/Resources/Asset/Images/Location.png")),
-                          title: SizedBox(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  // Consume the value of event.eventStadium
-                                  _inst.event.eventStadium.toString(),
-                                  style: const TextStyle(
-                                      color: Color(0xff120D26),
-                                      letterSpacing: 1,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400),
-                                ),
-                                const SizedBox(
-                                  height: 5,
-                                ),
-                                Text(
-                                  // Consume the value of event.location
-                                  _inst.event.location.toString(),
-                                  style: const TextStyle(
-                                      color: Color(0xff747688),
-                                      letterSpacing: 1,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400),
-                                ),
-                              ],
-                            ),
+                          const SizedBox(
+                            height: 5,
                           ),
-                        ),
-                        const SizedBox(
-                          height: 18,
-                        ),
-                        ListTile(
-                          leading: Container(
-                            height: 48,
-                            width: 48,
-                            padding: const EdgeInsets.all(6),
-                            decoration: BoxDecoration(
-                                color: const Color(0xffe5e5e5),
-                                borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(image: AssetImage(
-                                    // Consume the value of event.organizerImage
-                                    _inst.event.organizerImage))),
+                          Text(
+                            // Consume the value of event.daytime
+                            _inst.event.daytime.toString(),
+                            style: const TextStyle(
+                                color: Color(0xff747688),
+                                letterSpacing: 1,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400),
                           ),
-                          title: SizedBox(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  // Consume the value of event.organizer
-                                  _inst.event.organizer.toString(),
-                                  style: const TextStyle(
-                                      color: Color(0xff120D26),
-                                      letterSpacing: 1,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400),
-                                ),
-                                const SizedBox(
-                                  height: 5,
-                                ),
-                                const Text(
-                                  "Organizer",
-                                  style: TextStyle(
-                                      color: Color(0xff747688),
-                                      letterSpacing: 1,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400),
-                                ),
-                              ],
-                            ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 18,
+                  ),
+                  ListTile(
+                     contentPadding: const EdgeInsets.all(0),
+                    leading: Container(
+                        height: 48,
+                        width: 48,
+                        padding: const EdgeInsets.all(6),
+                        decoration: BoxDecoration(
+                            color: const Color(0xffe5e5e5),
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Image.asset(
+                            "lib/Helpers/Resources/Asset/Images/Location.png")),
+                    title: SizedBox(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            // Consume the value of event.eventStadium
+                            _inst.event.eventStadium.toString(),
+                            style: const TextStyle(
+                                color: Color(0xff120D26),
+                                letterSpacing: 1,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400),
                           ),
-                          trailing: Container(
-                            alignment: Alignment.center,
-                            height: 28,
-                            width: 60,
-                            padding: const EdgeInsets.all(6),
-                            decoration: BoxDecoration(
-                                color: const Color(0xffe5e5e5),
-                                borderRadius: BorderRadius.circular(5)),
-                            child: const Text(
-                              "Follow",
-                              style: TextStyle(
-                                  color: Color(0xff5669FF), fontSize: 12),
-                            ),
+                          const SizedBox(
+                            height: 5,
                           ),
-                        ),
-                      ],
+                          Text(
+                            // Consume the value of event.location
+                            _inst.event.location.toString(),
+                            style: const TextStyle(
+                                color: Color(0xff747688),
+                                letterSpacing: 1,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 18,
+                  ),
+                  ListTile(
+                    contentPadding: const EdgeInsets.all(0),
+                    leading: Container(
+                      height: 48,
+                      width: 48,
+                      padding: const EdgeInsets.all(6),
+                      decoration: BoxDecoration(
+                          color: const Color(0xffe5e5e5),
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(image: AssetImage(
+                              // Consume the value of event.organizerImage
+                              _inst.event.organizerImage))),
+                    ),
+                    title: SizedBox(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            // Consume the value of event.organizer
+                            _inst.event.organizer.toString(),
+                            style: const TextStyle(
+                                color: Color(0xff120D26),
+                                letterSpacing: 1,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400),
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          const Text(
+                            "Organizer",
+                            style: TextStyle(
+                                color: Color(0xff747688),
+                                letterSpacing: 1,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400),
+                          ),
+                        ],
+                      ),
+                    ),
+                    trailing: Container(
+                      alignment: Alignment.center,
+                      height: 28,
+                      width: 60,
+                      padding: const EdgeInsets.all(6),
+                      decoration: BoxDecoration(
+                          color: const Color(0xffe5e5e5),
+                          borderRadius: BorderRadius.circular(5)),
+                      child: const Text(
+                        "Follow",
+                        style: TextStyle(
+                            color: Color(0xff5669FF), fontSize: 12),
+                      ),
                     ),
                   ),
                   const SizedBox(

@@ -165,7 +165,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 195.0),
+              padding: const EdgeInsets.only(top: 195.0,left: 0,right: 0),
               child: Center(
                 child: Container(
                   alignment: Alignment.bottomCenter,
@@ -174,7 +174,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: ListView.builder(
                       shrinkWrap: true,
                       scrollDirection: Axis.horizontal,
-
+                        padding: const EdgeInsets.only(left:0,right: 0),
                       //Consume the category to find its length
                       itemCount: instance.category.length,
                       itemBuilder: (BuildContext context, int index) {
